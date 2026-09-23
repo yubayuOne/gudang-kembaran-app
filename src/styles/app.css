@@ -1,4 +1,4 @@
-@import 'tailwindcss' source('../');
+@import "tailwindcss";
 
 :root {
   font-family:
@@ -7,35 +7,42 @@
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
-    'Segoe UI',
+    "Segoe UI",
     sans-serif;
   color-scheme: light;
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
-  background: #f4f5fb;
+  background: #f7f7f5;
   color: #171717;
 }
+
 button,
 input,
 select,
 textarea {
   font: inherit;
 }
+
 button {
   cursor: pointer;
 }
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #d4d4d4;
   border-radius: 999px;
 }
+
 .field {
   width: 100%;
   border: 1px solid #e5e5e5;
@@ -48,7 +55,8 @@ button {
     border-color 0.15s,
     box-shadow 0.15s;
 }
+
 .field:focus {
   border-color: #a3a3a3;
-  box-shadow: 0 0 0 3px rgba(23, 23, 23, 0.05);
+  box-shadow: 0 0 0 3px rgb(23 23 23 / 5%);
 }

@@ -1,0 +1,33 @@
+{
+  "name": "gudang-kembaran",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/clean-routes.mjs && vite --host 0.0.0.0",
+    "build": "node scripts/clean-routes.mjs && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"*.{ts,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"*.{ts,json,md}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/ssr": "latest",
+    "@supabase/supabase-js": "latest",
+    "@tanstack/react-router": "latest",
+    "@tanstack/react-start": "latest",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "latest",
+    "@vitejs/plugin-react": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "vite-tsconfig-paths": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "prettier": "latest"
+  }
+}

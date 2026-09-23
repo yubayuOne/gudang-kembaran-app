@@ -1,0 +1,5 @@
+node_modules
+src/routeTree.gen.ts
+dist
+.vercel
+supabase/.branches

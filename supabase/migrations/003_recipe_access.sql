@@ -1,0 +1,35 @@
+alter table public.recipes enable row level security;
+alter table public.recipe_items enable row level security;
+alter table public.warehouses enable row level security;
+alter table public.stock_balances enable row level security;
+alter table public.production_orders enable row level security;
+alter table public.production_batches enable row level security;
+alter table public.roasting_records enable row level security;
+alter table public.grinding_records enable row level security;
+alter table public.packaging_records enable row level security;
+
+drop policy if exists "authenticated users can read recipes" on public.recipes;
+drop policy if exists "authenticated users can manage recipes" on public.recipes;
+drop policy if exists "authenticated users can read recipe items" on public.recipe_items;
+drop policy if exists "authenticated users can manage recipe items" on public.recipe_items;
+drop policy if exists "authenticated users can read warehouses" on public.warehouses;
+drop policy if exists "authenticated users can read production orders" on public.production_orders;
+drop policy if exists "authenticated users can create production orders" on public.production_orders;
+drop policy if exists "authenticated users can read production batches" on public.production_batches;
+drop policy if exists "authenticated users can create production batches" on public.production_batches;
+drop policy if exists "authenticated users can read roasting records" on public.roasting_records;
+drop policy if exists "authenticated users can read grinding records" on public.grinding_records;
+drop policy if exists "authenticated users can read packaging records" on public.packaging_records;
+
+create policy "authenticated users can read recipes" on public.recipes for select to authenticated using (true);
+create policy "authenticated users can manage recipes" on public.recipes for all to authenticated using (true) with check (true);
+create policy "authenticated users can read recipe items" on public.recipe_items for select to authenticated using (true);
+create policy "authenticated users can manage recipe items" on public.recipe_items for all to authenticated using (true) with check (true);
+create policy "authenticated users can read warehouses" on public.warehouses for select to authenticated using (true);
+create policy "authenticated users can read production orders" on public.production_orders for select to authenticated using (true);
+create policy "authenticated users can create production orders" on public.production_orders for insert to authenticated with check (true);
+create policy "authenticated users can read production batches" on public.production_batches for select to authenticated using (true);
+create policy "authenticated users can create production batches" on public.production_batches for insert to authenticated with check (true);
+create policy "authenticated users can read roasting records" on public.roasting_records for select to authenticated using (true);
+create policy "authenticated users can read grinding records" on public.grinding_records for select to authenticated using (true);
+create policy "authenticated users can read packaging records" on public.packaging_records for select to authenticated using (true);
